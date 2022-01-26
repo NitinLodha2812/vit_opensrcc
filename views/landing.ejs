@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Project portal,VIT,project,teammates,idea,Vit Open src"
+    />
+    <meta name="author" content="Nitin Lodha" />
+    <meta name="copyright" content="Development Leads To Inventions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Development Leads To Inventions" />
+    <title>Vit Open src</title>
+    <link rel="stylesheet" href="/public/assets/landing.css" />
+  </head>
+  <body>
+    <!-- This is  start of the navbar -->
+    <div class="topnav">
+      <a id="title" href="/">Vit Open src</a>
+      <a class="alig" href="/projects">Explore</a>
+      <a class="alig" href="/about">About</a>
+      <a class="alig" href="/contact">Contact</a>
+      <a class="alig" href="/gallery">Gallery</a>
+
+      <% if(!user){%>
+      <a class="alig" href="/register">Register</a>
+      <a class="alig" href="/login">Login</a>
+      <% }else{ %>
+      <a class="alig" href="/logout">Logout</a>
+
+      <a href="/userprofile"><img src="/<%= user.img.path %>" alt="" /></a>
+      <% } %>
+    </div>
+    <!-- navbar end -->
+
+    <!-- landing design -->
+    <div class="row">
+      <div class="banner">
+        <img src="/public/images/banner.png" />
+      </div>
+
+      <div class="text-box">
+        <h1>VIT OPEN SOURCE</h1>
+        <p>Open source Open challenges Open opportunities</p>
+        <div class="button-box">
+          <% if(!user){ %>
+
+          <a class="btn" href="/projects">Skip for now</a>
+          <%}else{%>
+          <a class="btn" href="/projects">Go To Portal</a>
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <!-- landing design ending -->
+
+    <!-- footer start -->
+    <div class="footer">
+      <p>Copyright &#169; 2021 Nitin Lodha</p>
+    </div>
+    <!-- footer end -->
+  </body>
+</html>
